@@ -1,0 +1,586 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  --liteGreen: #36fba1;
+  /* grey */
+  --grey-50: #656266;
+  --grey-100: #616161;
+  --grey-200: #322f33;
+  --grey-300: #1c181d;
+  /* font Color */
+  --light: #f1f1f1;
+  --mid: #616161;
+  --dark: #303030;
+  /* strokes */
+  --S50: #ebebeb;
+  --S100: #e1e1e1;
+  --S200: #616161;
+  /* states */
+  --hover: #f7f7f7;
+  --pressed: #f0f0f0;
+  --focused: #005bd3;
+  /* plain */
+  --white: #ffffff;
+  --background: #f1f1f1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  background: var(--background);
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+header {
+  background: var(--grey-300);
+  width: 100%;
+  height: 3.5em;
+  padding: 0.66em 2em;
+  color: #fff;
+  position: relative;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+nav {
+  justify-content: space-between;
+}
+.logoMd {
+  display: none;
+}
+.searchMenu {
+  width: 30em;
+  height: 2em;
+  border-radius: 6px;
+  background: var(--dark);
+  border: 1.3px solid var(--S200);
+  padding: 0 0.4em;
+}
+.searchMenu:hover {
+  border: 1px solid var(--hover);
+}
+.searchMenu:focus,
+.searchMenu:focus-visible,
+.searchMenu:focus-within {
+  border: 1px solid var(--pressed);
+}
+.searchMenu svg {
+  width: 1em;
+}
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: 1em;
+  width: 100%;
+}
+.N_P {
+  gap: 1em;
+}
+button.notify {
+  width: 2.5em;
+  height: 2.5em;
+  background: var(--dark);
+  border-radius: 3px;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+button.notify:hover {
+  background: var(--grey-50);
+}
+button.notify:focus,
+button.notify:focus-visible,
+button.notify:focus-within {
+  border: 1px solid var(--focused);
+}
+button.notify svg {
+  width: 1.8em;
+}
+
+button.profile {
+  height: 2.5em;
+  background: var(--dark);
+  border-radius: 3px;
+  padding-left: 0.4em;
+  border: none;
+  outline: none;
+}
+button.profile:hover {
+  background: var(--grey-50);
+}
+button.profile:focus,
+button.profile:focus-visible,
+button.profile:focus-within {
+  border: 1px solid var(--focused);
+}
+button.profile span {
+  margin-right: 0.78em;
+  color: var(--white);
+}
+.profileBox {
+  width: 1.8em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--liteGreen);
+  border-radius: 4px;
+}
+
+.notifyDropDown {
+  width: 20em;
+  height: 7em;
+  background: var(--white);
+  border-radius: 6px;
+  position: absolute;
+  top: 4em;
+  right: 1em;
+  padding: 0.2em 0.9em;
+}
+.alFr {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.alrt {
+  font-size: 0.89em;
+  font-weight: 600;
+  color: var(--dark);
+}
+.filter-bar svg {
+  width: 0.78em;
+  margin-right: 0.78em;
+}
+.filter-bar svg {
+  width: 1em;
+}
+.notifyMsg {
+  width: 100%;
+  height: 3.5em;
+  background: var(--background);
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.678em;
+}
+
+.profileDropDown {
+  width: 15em;
+  height: 20em;
+  background: var(--white);
+  border-radius: 6px;
+  position: absolute;
+  top: 4em;
+  right: 1em;
+  padding: 0.26em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+}
+.NavLinks button {
+  width: 100%;
+  height: 2em;
+  background: var(--light);
+  border-radius: 3px;
+  padding: 0 0.2em;
+  background: transparent;
+  color: var(--dark);
+  outline: none;
+  border: none;
+}
+button:focus,
+button:focus-visible,
+button:focus-within {
+  border: 2px solid var(--focused);
+}
+.dd_profile span {
+  font-size: 0.87em;
+  font-weight: 600;
+  margin-left: 0.766em;
+}
+a.check svg {
+  width: 1em;
+}
+button .store {
+  width: 100%;
+  height: 1.798em;
+  display: flex;
+  background: transparent;
+  align-items: center;
+}
+.store svg {
+  width: 1.75em;
+}
+.bt {
+  width: 100%;
+  display: block;
+  border-top: 1px solid var(--grey-50);
+  opacity: 0.4;
+}
+
+a.li button {
+  width: 100%;
+  height: 2.3em;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: var(--dark);
+  background: transparent;
+  border: none;
+  outline: none;
+}
+a.li button:focus,
+a.li button:focus-visible,
+a.li button:focus-within {
+  border: 2px solid var(--focused);
+}
+a.li button div {
+  text-align: start;
+}
+a.li:hover {
+  background: var(--hover);
+  border-radius: 6px;
+}
+a.li span {
+  font-size: 0.98em;
+  font-weight: 500;
+  margin-left: 1em;
+}
+
+a.user button {
+  width: 100%;
+  height: 2em;
+  padding: 0.2em 0.7em;
+  background: transparent;
+  color: var(--dark);
+  outline: none;
+  border: none;
+}
+a.user button:focus,
+a.user button:focus-visible,
+a.user button:focus-within {
+  border: 2px solid var(--focused);
+}
+
+a.user button div {
+  text-align: start;
+}
+a.user h6 {
+  font-size: 0.689em;
+  font-weight: 600;
+}
+a.user p {
+  font-size: 0.6em;
+}
+
+.hidden {
+  display: none;
+}
+
+/* content */
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+.wrapper {
+  padding: 3em 2em;
+}
+.trialBox {
+  background: var(--grey-300);
+  color: var(--white);
+  width: 50em;
+  height: 3em;
+  border-radius: 6px;
+  justify-content: space-between;
+  padding: 0.75em 1em;
+  margin: 0 0 1em;
+}
+.trialBox span {
+  font-size: 0.89em;
+}
+.plan {
+  gap: 1em;
+}
+.plan button {
+  border: none;
+  outline: none;
+  padding: 0.5em 0.789em;
+  border-radius: 4px;
+  font-weight: 700;
+  background: var(--white);
+}
+.plan svg {
+  width: 1.3em;
+}
+.guide_section {
+  width: 50em;
+  height: clamp(100%, 35em);
+  background: var(--white);
+  border-radius: 1.3em;
+  padding: 1.2em 1em;
+}
+section {
+  justify-content: space-between;
+}
+section span {
+  font-size: 0.89em;
+  font-weight: 500;
+}
+button.chevron-up svg {
+  width: 1.6em;
+  height: 1.7em;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+}
+
+button.chevron-up:focus,
+button.chevron-up:focus-visible,
+button.chevron-up:focus-within {
+  border: 2px solid var(--focused);
+}
+.chevron-up svg:hover {
+  background: var(--background);
+}
+.desc {
+  font-size: 0.899em;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+
+/* progess */
+.progressSec {
+  align-items: center;
+}
+
+#progressText {
+  font-size: 0.79em;
+  font-weight: 500;
+  margin-right: 0.65em;
+}
+
+.progress {
+  height: 5px;
+  width: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+.progressContainer {
+  width: 20%;
+  background-color: var(--background);
+  border-radius: 5px;
+}
+#progress {
+  background-color: var(--dark);
+  transition: width 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* guide card */
+
+.Guide.close {
+  display: none;
+}
+
+button.guideCard {
+  width: 100%;
+  background: var(--background);
+  padding: 0.2em 0.6em;
+  border-radius: 10px;
+  margin-top: 1em;
+  border: none;
+  outline: none;
+}
+button.guideCard .wrapper {
+  padding: 0.23em 1em;
+}
+button.guideCard .wrapper .tt {
+  width: 100%;
+  gap: 2em;
+}
+
+button.guideCard .wrapper .tt h1 {
+  font-size: 0.89em;
+}
+
+button.guideCard:focus,
+button.guideCard:focus-visible,
+button.guideCard:focus-within {
+  border: 2px solid var(--focused);
+}
+button.guideCard .wrapper .tt .icon_one,
+button.guideCard .wrapper .tt .check_icon {
+  width: 1.9em;
+}
+button.guideCard .wrapper .tt .icon_one:hover circle {
+  stroke-dasharray: none;
+}
+
+button.guideCard .wrapper .cardContent {
+  width: 100%;
+  height: 0;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: hidden;
+}
+
+button.guideCard .wrapper .cardContent.open {
+  height: 7em;
+  overflow-y: hidden;
+}
+button.guideCard .wrapper .cardContent .text div {
+  font-size: 0.989em;
+  font-weight: 500;
+  margin-bottom: 0.45em;
+}
+button.guideCard .wrapper .cardContent .text a {
+  font-size: 0.98em;
+}
+button.guideCard .wrapper .cardContent .text .btn {
+  width: 10em;
+  height: 2.5em;
+  background: var(--grey-300);
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button.guideCard .wrapper .cardContent .text .btn:hover {
+  background: var(--grey-200);
+}
+button.guideCard .wrapper .cardContent .text .btn:focus,
+button.guideCard .wrapper .cardContent .text .btn:focus-visible,
+button.guideCard .wrapper .cardContent .text .btn:focus-within {
+  border: 2px solid var(--focused);
+}
+button.guideCard .wrapper .cardContent .btIm {
+  gap: 1em;
+}
+.import {
+  width: 8em;
+  height: 2em;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 0.9em;
+  color: var(--dark);
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.import:hover {
+  background: var(--S50);
+}
+
+.check_icon {
+  display: none;
+}
+@media (max-width: 916px) {
+  .container {
+    aspect-ratio: 1/1.8;
+  }
+  header {
+    padding: 0.66em 1em;
+  }
+  nav {
+    gap: 2em;
+  }
+  .logoLg,
+  .profile span {
+    display: none;
+  }
+  .logoMd {
+    display: block;
+  }
+  .searchMenu {
+    width: 100%;
+    max-width: 20em;
+    min-width: 10em;
+  }
+  .N_P {
+    gap: 0.556em;
+  }
+  button.profile {
+    padding: 0;
+  }
+  .profile,
+  .profile:hover {
+    background: transparent;
+  }
+
+  .profileBox {
+    width: 2em;
+    height: 2em;
+    border-radius: 4px;
+  }
+  .content {
+    display: block;
+  }
+  .trialBox {
+    border-radius: 0px;
+    width: 100%;
+  }
+  .trialBox span {
+    font-size: 0.67em;
+  }
+  .plan button {
+    font-size: 0.77em;
+    width: 9em;
+    height: 3em;
+  }
+  .guide_section {
+    width: 100%;
+    border-radius: 0px;
+  }
+  .guideCard {
+    padding: 0.1em 0.3em;
+  }
+  .cardContent.open {
+    height: 9em;
+  }
+  .cardContent img {
+    display: none;
+  }
+  button.btn {
+    width: 10em;
+    height: 2em;
+  }
+  section span {
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+  .desc {
+    font-size: 0.98;
+    font-weight: 700;
+    margin-top: 1.2em;
+  }
+  #progressText {
+    font-weight: 700;
+    font-size: 0.89em;
+  }
+}
